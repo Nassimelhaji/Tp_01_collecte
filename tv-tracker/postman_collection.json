@@ -1,0 +1,10 @@
+{
+  "info": { "name": "tv-tracker TP1 - tests", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "item": [
+    { "name": "GET /medias", "request": { "method": "GET", "url": { "raw": "http://localhost:3000/api/medias", "host": ["http://localhost:3000"], "path": ["api","medias"] } } },
+    { "name": "GET /medias filter", "request": { "method": "GET", "url": { "raw": "http://localhost:3000/api/medias?type=serie&genre=sci-fi", "host": ["http://localhost:3000"], "path": ["api","medias"], "query": [{ "key": "type", "value": "serie" }, { "key": "genre", "value": "sci-fi" }] } } },
+    { "name": "POST /films (valid)", "request": { "method": "POST", "header": [{ "key": "x-user-role", "value": "admin" }, { "key": "x-user-id", "value": "u1" }, { "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{ \"titre\": \"My Film\", \"plateforme\": \"Netflix\", \"userId\": \"u1\", \"duree\": 120, \"genre\": \"drama\", \"annee\": 2020 }" }, "url": { "raw": "http://localhost:3000/api/films", "host": ["http://localhost:3000"], "path": ["api","films"] } } },
+    { "name": "POST /films (invalid - titre manquant)", "request": { "method": "POST", "header": [{ "key": "x-user-role", "value": "admin" }, { "key": "x-user-id", "value": "u1" }, { "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{ \"plateforme\": \"Netflix\", \"userId\": \"u1\", \"duree\": 120 }" }, "url": { "raw": "http://localhost:3000/api/films", "host": ["http://localhost:3000"], "path": ["api","films"] } } },
+    { "name": "POST /series (valid)", "request": { "method": "POST", "header": [{ "key": "x-user-role", "value": "admin" }, { "key": "x-user-id", "value": "u1" }, { "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{ \"titre\": \"New Series\", \"plateforme\": \"Hulu\", \"userId\": \"u1\", \"statut\": \"en_attente\" }" }, "url": { "raw": "http://localhost:3000/api/series", "host": ["http://localhost:3000"], "path": ["api","series"] } } }
+  ]
+}
