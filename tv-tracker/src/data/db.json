@@ -1,0 +1,35 @@
+{
+
+  "medias": [
+    {
+      "id": "film-1",
+      "type": "film",
+      "titre": "Inception",
+      "plateforme": "Netflix",
+      "userId": "u1",
+      "duree": 148,
+      "genre": "sci-fi",
+      "annee": 2010
+    },
+    {
+      "id": "serie-1",
+      "type": "serie",
+      "titre": "Stranger Things",
+      "plateforme": "Netflix",
+      "userId": "u2",
+      "statut": "en_cours",
+      "saisons": [
+        {
+          "numero": 1,
+          "episodes": [
+            { "id": "ep-1", "titre": "Chapter One", "numero": 1, "duree": 49, "watched": false }
+          ]
+        }
+      ]
+    }
+  ],
+  "users": [
+    { "id": "u1", "nom": "Alice", "role": "admin" },
+    { "id": "u2", "nom": "Bob", "role": "user" }
+  ]
+}
